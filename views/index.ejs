@@ -16,10 +16,12 @@
   </form>
   <div id="recipeContainer" class="hidden">
 
-    <!-- If no recipe yet, show: -->
+    <!-- If no recipe yet, show: 'pick your favourite Taco Ingredient'-->
     <!-- Else, show the recipe name e.g. <h2>Recipe name</h2>-->
-    <%  if (locals.menuOption){  %>
-      <h2><%= menuOption.name %></h2>
+    <% if (locals.menuOption){ %>
+      <h2>
+        <%= menuOption.name %>
+      </h2>
       <h3>Ingredients:</h3>
       <ul id="ingredientsList">
         <li>
@@ -28,17 +30,21 @@
         <li>
           <%= menuOption.ingredients.salsa.name %>
         </li>
-        <% menuOption.ingredients.toppings.forEach((topping) => { %>
-          <li><%= topping.quantity %> of <%= topping.name %></li>
-       <% }) %>
-       <h3>Topping Ingredients:</h3>
-        <% menuOption.ingredients.toppings.forEach((topping) => { %>
-          <li><%= topping.ingredients %></li>
-       <% }) %>
+        <% menuOption.ingredients.toppings.forEach((topping)=> { %>
+          <li>
+            <%= topping.quantity %> of <%= topping.name %>
+          </li>
+          <% }) %>
+            <h3>Topping Ingredients:</h3>
+            <% menuOption.ingredients.toppings.forEach((topping)=> { %>
+              <li>
+                <%= topping.ingredients %>
+              </li>
+              <% }) %>
       </ul>
-    <% } else { %> 
-      <h2>Pick your favourite taco ingredient 👆</h2>
-    <% } %> 
+      <% } else { %>
+        <h2>Pick your favourite taco ingredient 👆</h2>
+        <% } %>
 
 
 
