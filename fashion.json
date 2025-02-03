@@ -1,0 +1,135 @@
+[
+    {
+        "id": "0001",
+        "type": "outfit",
+        "name": "Traditional wears",
+        "price": 50.50,
+        "materials": {
+            "head": {
+                "name": "Fila cap",
+                "position": "Head"
+            },
+            "body": {
+                "name": "Agbada and Sòkòtò",
+                "hotness": "80% drip!"
+            },
+            "foot": [
+                {
+                    "name": "Bata Yoruba",
+                    "quantity": "1 pair",
+                    "materials": [
+                        "leather"
+                    ]
+                },
+                {
+                    "name": "Brogue",
+                    "quantity": "1 pair",
+                    "materials": [
+                        "leather",
+                        " hide and skin"
+                    ]
+                },
+                {
+                    "name": "Corporate Shoes",
+                    "quantity": "1 pair",
+                    "material": [
+                        "leather",
+                        " hide and skin"
+                    ]
+                },
+                {
+                    "name": "pam",
+                    "quantity": "1 pair",
+                    "materials": [
+                        "leather"
+                    ]
+                }
+            ]
+        }
+    },
+    {
+        "id": "0002",
+        "type": "outfit",
+        "name": "Casual Wears",
+        "price": 70.49,
+        "materials": {
+            "head": {
+                "name": "Trucker hat",
+                "position": "Head"
+            },
+            "body": {
+                "name": "Styled T-Shirt",
+                "hotness": "85% drip!"
+            },
+            "foot": [
+                {
+                    "name": "Nike Sneakers",
+                    "quantity": "1 pair",
+                    "materials": [
+                        "Leather",
+                        "synthetic materials"
+                    ]
+                },
+                {
+                    "name": "NB Sneakers",
+                    "quantity": "1 pair",
+                    "materials": [
+                        "Leather",
+                        "synthetic materials"
+                    ]
+                },
+                {
+                    "name": "Slides",
+                    "quantity": "1 pair",
+                    "ingredients": [
+                        "plastic",
+                        "leather"
+                    ]
+                }
+            ]
+        }
+    },
+    {
+        "id": "0003",
+        "type": "outfit",
+        "name": "Corporate Wears",
+        "price": 200.15,
+        "materials": {
+            "head": {
+                "name": "Hat",
+                "position": "Head"
+            },
+            "body": {
+                "name": "Tuxedo, tie, and pants",
+                "hotness": "95% drip!"
+            },
+            "foot": [
+                {
+                    "name": "Brogue",
+                    "quantity": "1 pair",
+                    "materials": [
+                        "Leather",
+                        "Synthetic Materials"
+                    ]
+                },
+                {
+                    "name": "Chelsea Boot",
+                    "quantity": "1 pair",
+                    "materials": [
+                        "Leather",
+                        "Synthetic Materials"
+                    ]
+                },
+                {
+                    "name": "Corporate Shoes",
+                    "quantity": "1 pair",
+                    "ingredients": [
+                        "Leather",
+                        "Hide and Skin",
+                        "Synthetic Materials"
+                    ]
+                }
+            ]
+        }
+    }
+]

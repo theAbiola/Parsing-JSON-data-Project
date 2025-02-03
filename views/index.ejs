@@ -2,53 +2,61 @@
 <html>
 
 <head>
-  <title>Taco Recipes</title>
+  <title>Outfit Options</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+Display:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet">
   <link rel="stylesheet" type="text/css" href="/styles/main.css">
 </head>
 
 <body>
-  <h1>Taco Town 🌮</h1>
+  <h1 class="noto-serif-display-bold">Fashion House👖👗</h1>
 
-  <form action="/recipe" method="POST" class="buttons">
-    <button type="submit" value="chicken" name="choice">🍗</button>
-    <button type="submit" value="beef" name="choice">🥩</button>
-    <button type="submit" value="fish" name="choice">🐟</button>
+  <form action="/fashion" method="POST" class="buttons">
+    <button type="submit" value="trad" name="choice">👘👳🏽‍♂️</button>
+    <button type="submit" value="casual" name="choice">👕👟</button>
+    <button type="submit" value="corporate" name="choice">👔👞</button>
   </form>
-  <div id="recipeContainer" class="hidden">
+  <div id="outfitContainer" class="hidden noto-serif-display-normal">
 
-    <!-- If no recipe yet, show: 'pick your favourite Taco Ingredient'-->
-    <!-- Else, show the recipe name e.g. <h2>Recipe name</h2>-->
-    <% if (locals.menuOption){ %>
+    <!-- If no outfit option yet, show: 'pick your Outfit type'-->
+    <!-- Else, show the oufit name e.g. <h2>Fashion name</h2>-->
+    <% if (locals.outfitOption){ %>
       <h2>
-        <%= menuOption.name %>
+        <%= outfitOption.name %>
       </h2>
-      <h3>Ingredients:</h3>
-      <ul id="ingredientsList">
+      <h3>Materials:</h3>
+      <ul id="outfitList">
         <li>
-          <%= menuOption.ingredients.protein.name %>, <%= menuOption.ingredients.protein.preparation%>
+          <%= outfitOption.materials.head.name %>, <%= outfitOption.materials.head.position%>
         </li>
         <li>
-          <%= menuOption.ingredients.salsa.name %>
+          <%= outfitOption.materials.body.name %>
         </li>
-        <% menuOption.ingredients.toppings.forEach((topping)=> { %>
+        <% outfitOption.materials.foot.forEach((footwear)=> { %>
           <li>
-            <%= topping.quantity %> of <%= topping.name %>
+            <%= footwear.quantity %> of <%= footwear.name %>
           </li>
           <% }) %>
-            <h3>Topping Ingredients:</h3>
-            <% menuOption.ingredients.toppings.forEach((topping)=> { %>
+            <h3>Footwear Materials:</h3>
+            <% outfitOption.materials.foot.forEach((footwear)=> { %>
               <li>
-                <%= topping.ingredients %>
+                <%= footwear.materials%>
               </li>
               <% }) %>
       </ul>
       <% } else { %>
-        <h2>Pick your favourite taco ingredient 👆</h2>
+        <h2>Pick your favourite type of outfit 👆</h2>
         <% } %>
 
 
 
   </div>
+
+  <footer>
+    Copyright © Abdulraheem Habib Abiola, <%= new Date().getFullYear() %>
+  </footer>
 </body>
 
 </html>
